@@ -5,8 +5,8 @@ const port = 5000
 const mongoDB = require( './db' )
 mongoDB()
 
-app.get( '/', ( req, res ) => {hanges
-    res.send( 'Hello World!' )
+app.get( '/', ( req, res ) => {
+    res.send( 'Hello World!' );
 } )
 
 app.use( ( req, res, next ) => {
