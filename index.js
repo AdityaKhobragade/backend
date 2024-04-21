@@ -1,6 +1,6 @@
 const express = require( 'express' )
 const app = express()
-
+const cors = require( 'cors' ); // Import CORS middleware
 const port = 5000
 const mongoDB = require( './db' )
 mongoDB()
@@ -9,8 +9,11 @@ app.get( '/', ( req, res ) => {
     res.send( 'Hello World!' );
 } )
 
+// Enable CORS middleware
+app.use( cors() );
+
 app.use( ( req, res, next ) => {
-    res.setHeader( "Access-Control-Allow-Origin", "https://backend-5t80.onrender.com" );
+    res.setHeader( "Access-Control-Allow-Origin", "https://backend-phi-liard.vercel.app" );
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
