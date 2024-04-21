@@ -10,7 +10,7 @@ app.get( '/', ( req, res ) => {
 } )
 
 app.use( ( req, res, next ) => {
-    res.setHeader( "Access-Control-Allow-Origin", "https://backend-phi-liard.vercel.app" );
+    res.setHeader( "Access-Control-Allow-Origin", "https://backend-5t80.onrender.com" );
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
